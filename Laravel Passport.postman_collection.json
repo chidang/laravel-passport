@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "a5fb95c0-7c16-4972-ba52-5976859d3d8c",
+		"name": "Laravel Passport",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://api-auth.me/api/register?name=user1&email=user1@test.com&password=11111111&password_confirmation=11111111",
+					"protocol": "http",
+					"host": [
+						"api-auth",
+						"me"
+					],
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "user1"
+						},
+						{
+							"key": "email",
+							"value": "user1@test.com"
+						},
+						{
+							"key": "password",
+							"value": "11111111"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "11111111"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "dangtanminhchi@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "11111111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://api-auth.me/api/login",
+					"protocol": "http",
+					"host": [
+						"api-auth",
+						"me"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CurrentUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjNmMTg2MGIxNTlkNWM3MGUyYWU2YzI5ZGIzOTQxOGY5OTRlOGNlNTE2MTJkMjgyZGM2NTEzOGM0NzgzOWJmNmI2NDc1MWQxMzE2NjYzMDNmIn0.eyJhdWQiOiIxNCIsImp0aSI6IjNmMTg2MGIxNTlkNWM3MGUyYWU2YzI5ZGIzOTQxOGY5OTRlOGNlNTE2MTJkMjgyZGM2NTEzOGM0NzgzOWJmNmI2NDc1MWQxMzE2NjYzMDNmIiwiaWF0IjoxNTYzMDY3ODkxLCJuYmYiOjE1NjMwNjc4OTEsImV4cCI6MTU5NDY5MDI5MSwic3ViIjoiMiIsInNjb3BlcyI6W119.aHPtOpYxl6z27Tvb-8nc_fMj9t7fXvtfQ3wlEhUNnuk3nKnWgSYlV9dNZJJn0HpPZIW7MhDXDKQDVGjTzKgOFZjZPIdkkqMLDVtrW4pb2Og110feCcm5uvamdOPUMyWQbuRJekMDr1FyJp4Yby_nSTh6RlN6D9oxN87oHOWOKQUJ9j8OakdNggBNWKPzHJ8jBkasNJMAe0CWis8M1suUGVk6ofNTNMlcOUZ4ROEZ8u1ekkbeJIo7YLhQKGXW6cfGOQpKRWbEsyNMeM2p3itzKHExFLBnoHtg-4QR6dCdsF2fPZMVLSnCspGKuMXsbBrxtwfQiccWjR-F-JRrlgK__3g8sS8ONqQudmPK1eFuBs-dhrF_ksdwR5ePqxY0c0Ji0yzb0nPU5LZxJcjzptlBXObQn0LWkcAjJ-wecqFsp3M5zQW9KI5jXyotmW9kSlMwwkLQu_T-7VvrWBwdvX15a_JmIJwAJcxvXPcrM1aavXJbZOMasBL-N7hrNEbMVIRjduxlkA0DcBS-usJztwfBt4Vy4Q3zsg6ozGtvmDExxL-VYnZsxUhAyZDVcQB6LV_-DfDNnetxzloZV8BujoptpWWrULTK3vvSP_YmYdNLzCLzWdcKgsf2Tb32rUopN0zjPOVxTwQa11VJL5Fhlk2Nh-cppjtZ1c_wwwsUfO_Oirw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Bear",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://api-auth.me/api/user",
+					"protocol": "http",
+					"host": [
+						"api-auth",
+						"me"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
